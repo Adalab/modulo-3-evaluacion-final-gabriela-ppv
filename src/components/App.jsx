@@ -4,6 +4,7 @@ import CharacterList from "./CharacterList";
 import { useEffect, useState } from "react";
 import getDataApi from "../services/api";
 import Filters from "./Filters";
+import CharacterDetail from "./CharacterDetail";
 
 
 function App() {
@@ -46,6 +47,7 @@ const filterCharacter = character.filter((charac)=>charac.name.toLowerCase().inc
 
 </>
 }/>
+<Route path="/detail/:id" element ={ < CharacterDetail character ={character} />}/>
 
  </Routes>
     </div>

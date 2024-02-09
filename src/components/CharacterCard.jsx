@@ -1,16 +1,20 @@
+import { Link } from "react-router-dom";
 
 
 function CharacterCard({char}) {
 
-const imgRem ="https://hips.hearstapps.com/hmg-prod/images/harry-potter-y-la-piedra-filosofal-677923633-large-1636701473.jpg?crop=0.793xw:1.00xh;0.104xw,0&resize=640:*";
+const imgRem ="https://m.media-amazon.com/images/M/MV5BOTA3MmRmZDgtOWU1Ny00ZDc5LWFkN2YtNzNlY2UxZmY0N2IyXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_FMjpg_UX1000_.jpg";
 
 
 
   return (
     <div className= "card">
-      <img src={char.image || imgRem} alt={char.name} className="imgCard"/>
+      <Link to={`/detail/${char.id}`}>
+     <img src={char.image || imgRem} alt={char.name} className="imgCard"/>
+     </Link>
       <h3>{char.name}</h3>
       <p>{char.specie}</p>
+      
       </div>
   )
 }
