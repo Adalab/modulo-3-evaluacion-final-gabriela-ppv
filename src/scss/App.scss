@@ -3,7 +3,12 @@
 .father{
 background-color:darkcyan;
 }
-
+.header{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  
+}
 img{
     width: 150px;
     height: 200px;

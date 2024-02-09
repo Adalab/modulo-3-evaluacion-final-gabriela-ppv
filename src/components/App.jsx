@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 import getDataApi from "../services/api";
 import Filters from "./Filters";
 import CharacterDetail from "./CharacterDetail";
+import NotFound from "./NotFound";
+import localStorage from "../services/localStorage";
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 function App() {
@@ -16,6 +20,7 @@ function App() {
 useEffect(()=>{
   getDataApi().then((cleanData)=>{
     setCharacter(cleanData);
+    localStorage.set("characters", cleanData);
 
   })
 },[])
@@ -44,8 +49,10 @@ const handleReset =()=>{
 
 
   return (
+  
     <div className="father">
-      <h1>Harry Potter</h1>
+    <Header/>
+      
  <Routes>
 <Route path="/" element={ 
 <>
@@ -55,8 +62,11 @@ const handleReset =()=>{
 </>
 }/>
 <Route path="/detail/:id" element ={ < CharacterDetail character ={character} />}/>
+<Route path="*" element ={<NotFound/>}/>
 
  </Routes>
+
+ <Footer/>
     </div>
   )
 }
