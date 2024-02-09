@@ -1,6 +1,6 @@
 
 
-function FilterHouse({handleFilterHouse}) {
+function FilterHouse({handleFilterHouse,filterHouseChar}) {
 
 const handleOption =(ev)=>{
   handleFilterHouse (ev.target.value);
@@ -10,7 +10,7 @@ const handleOption =(ev)=>{
     <div>
 
       <label htmlFor="houseFilter">Selecciona la Casa:</label>
-      <select name="" id="houseFilter" onChange={handleOption}>
+      <select name="" id="houseFilter" value ={filterHouseChar} onChange={handleOption}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Ravenclaw">Ravenclaw</option>

@@ -6,11 +6,12 @@ const getDataApi = () => {
         return {
           id: character.id,
           name: character.name,
+          alternate_names: character.alternate_names,
           specie: character.species,
           gender: character.gender,
           house: character.house,
           image: character.image,
-          estatus: character.alive,
+          estatus: character.alive
         };
       });
 

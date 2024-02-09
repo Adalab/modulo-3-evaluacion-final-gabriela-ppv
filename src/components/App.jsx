@@ -35,6 +35,13 @@ const filterCharacter = character.filter((charac)=>charac.name.toLowerCase().inc
 .filter((house)=>house.house===filterHouseChar);
 
 
+const handleReset =()=>{
+  
+  setFilterNameChar("");
+  setFilterHouseChar("Gryffindor");
+}
+
+
 
   return (
     <div className="father">
@@ -42,8 +49,8 @@ const filterCharacter = character.filter((charac)=>charac.name.toLowerCase().inc
  <Routes>
 <Route path="/" element={ 
 <>
-<Filters filterNameChar={filterNameChar}  handleFilterName={handleFilterName} handleFilterHouse ={handleFilterHouse}/>
-<CharacterList character ={filterCharacter}/>
+<Filters filterNameChar={filterNameChar}  handleFilterName={handleFilterName} handleFilterHouse ={handleFilterHouse} handleReset ={handleReset} filterHouseChar ={filterHouseChar}/>
+<CharacterList character ={filterCharacter} filterNameChar={filterNameChar}/>
 
 </>
 }/>
