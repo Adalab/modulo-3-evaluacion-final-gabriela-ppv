@@ -18,22 +18,13 @@ const renderCard =()=>{
    
 <img src={findCharacter.image || imgRem} alt={findCharacter.name} className="imgCard"/>
     <h3>{findCharacter.name}</h3>
-    <p>
-          Estatus:
-          {findCharacter.estatus ===true ? (
-            <>
-              <i className="fa-solid fa-heart-pulse" style={{ color: "black" }}></i>
-              Con vida
-            </>
-          ) : (
-            <>
-              <i className="fa-solid fa-skull" style={{ color: "black" }}></i>
-              Ha muerto
-            </>
-          )}
-        </p>
+    <p>Estatus: {findCharacter.estatus ===true ? ( <>
+            Con vida <i className="fa-solid fa-heart-pulse" style={{ color: "black" }}></i>
+              </> ) : (<>Ha muerto <i className="fa-solid fa-skull" style={{ color: "black" }}></i> </>
+         )}</p>
     
-    {/* <p>Estatus:{findCharacter.estatus === true ? ("Con vida"):("Ha muerto")}</p> */}
+        <p> {findCharacter.alternate_names && findCharacter.alternate_names.length > 0 ? (
+    <span>Nombres alternativos: {findCharacter.alternate_names.join(", ")}</span>) : null}</p>
     <p>Especie: {findCharacter.specie}</p>
     <p> Genero: {findCharacter.gender}</p>
     <p> Casa: {findCharacter.house}</p>

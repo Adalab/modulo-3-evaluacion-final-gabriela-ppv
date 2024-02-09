@@ -8,7 +8,7 @@ function CharacterList({character,filterNameChar}) {
     return(
       <li>
       <p>
-        Ningún Personaje coincide con {filterNameChar}. ¡Inténtalo de nuevo!
+        Ningún Personaje coincide con tu busqueda {filterNameChar}. ¡Inténtalo de nuevo!
       </p>
     </li>
     )

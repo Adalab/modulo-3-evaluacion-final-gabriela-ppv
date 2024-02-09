@@ -4,8 +4,8 @@ import FilterName from "./FilterName"
 
 function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset,filterHouseChar}) {
 
- const handleClickReset =()=>{
-  console.log("resetingfilter");
+ const handleClickReset =(event)=>{
+  event.preventDefault();
   handleReset();
  }
 
