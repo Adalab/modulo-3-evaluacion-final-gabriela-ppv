@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 
 
 function CharacterDetail({character}) {
@@ -15,7 +15,7 @@ const imgRem ="https://m.media-amazon.com/images/M/MV5BOTA3MmRmZDgtOWU1Ny00ZDc5L
 const renderCard =()=>{
   if(findCharacter){
     return <div className="detail">
-    <p> volver</p>
+   
 <img src={findCharacter.image || imgRem} alt={findCharacter.name} className="imgCard"/>
     <h3>{findCharacter.name}</h3>
     <p>{findCharacter.estatus}</p>
@@ -23,17 +23,15 @@ const renderCard =()=>{
     <p>{findCharacter.gender}</p>
     <p>{findCharacter.house}</p>
 
-
   </div>
   } else{
     return null;
   }
 }
-
-    
   
     return(
     <div>
+      <Link to= "/" >Volver</Link> 
       {renderCard()}
       </div>
       
