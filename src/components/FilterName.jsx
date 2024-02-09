@@ -1,8 +1,20 @@
 
 
-function FilterName() {
+function FilterName({filterNameChar,handleFilterName}) {
+
+const handleChange =(ev)=>{
+  handleFilterName(ev.target.value);
+
+}
+
   return (
-    <div>FilterName</div>
+    <div>
+      <label htmlFor="">
+        Buscar por Personaje:
+      </label>
+      <input type="text"  placeholder="Maria" value ={filterNameChar}  onChange={handleChange}/>
+
+    </div>
   )
 }
 

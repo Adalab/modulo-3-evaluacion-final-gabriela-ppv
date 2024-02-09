@@ -10,12 +10,9 @@ function CharacterList({character}) {
 
 
 
-
-
-
   return (
-    <div>
-      <ul>
+    <div >
+      <ul className="container">
         {renderCharacter}
       </ul>
     </div>

@@ -1,9 +1,18 @@
 @import'core/reset.scss';
 
-.card{
-    width:150px;
+.father{
+background-color:darkcyan;
 }
 
-.imgCard{
-    width: 100%;
+img{
+    width: 150px;
+    height: 200px;
+}
+
+.container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    
 }
