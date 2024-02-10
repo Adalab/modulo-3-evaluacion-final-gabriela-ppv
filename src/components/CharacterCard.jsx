@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import PropTypes from "prop-types";
 
 function CharacterCard({char}) {
 
@@ -17,6 +17,10 @@ const imgRem ="https://m.media-amazon.com/images/M/MV5BOTA3MmRmZDgtOWU1Ny00ZDc5L
       
       </div>
   )
+}
+
+CharacterCard.propTypes ={
+  char:PropTypes.object,
 }
 
 export default CharacterCard

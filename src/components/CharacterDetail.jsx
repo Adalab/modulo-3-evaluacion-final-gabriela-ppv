@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom"
-
+import PropTypes from "prop-types";
 
 function CharacterDetail({character}) {
 
@@ -46,5 +46,10 @@ const renderCard =()=>{
    
   
 }
+CharacterDetail.propTypes ={
+  character: PropTypes.array,
+  
+}
+
 
 export default CharacterDetail

@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function FilterHouse({handleFilterHouse,filterHouseChar}) {
 
@@ -19,6 +19,10 @@ const handleOption =(ev)=>{
       </select>
     </div>
   )
+}
+FilterHouse.propTypes ={
+  handleFilterHouse:PropTypes.func,
+  filterHouseChar:PropTypes.string,
 }
 
 export default FilterHouse

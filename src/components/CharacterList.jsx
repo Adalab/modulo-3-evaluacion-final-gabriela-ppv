@@ -1,4 +1,5 @@
-import CharacterCard from "./CharacterCard"
+import CharacterCard from "./CharacterCard";
+import PropTypes from "prop-types";
 
 
 function CharacterList({character,filterNameChar}) {
@@ -34,4 +35,9 @@ function CharacterList({character,filterNameChar}) {
   )
 }
 }
+CharacterList.propTypes ={
+  character:PropTypes.array,
+  filterNameChar:PropTypes.string,
+}
+
 export default CharacterList

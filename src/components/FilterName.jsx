@@ -1,4 +1,4 @@
-
+import PropTypes from "prop-types";
 
 function FilterName({filterNameChar,handleFilterName}) {
 
@@ -23,6 +23,10 @@ const handleKey =(event)=>{
 
     </div>
   )
+}
+FilterName.propTypes ={
+  filterNameChar:PropTypes.string,
+  handleFilterName:PropTypes.func,
 }
 
 

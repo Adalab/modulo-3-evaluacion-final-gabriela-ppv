@@ -1,6 +1,6 @@
 import FilterHouse from "./FilterHouse"
 import FilterName from "./FilterName"
-
+import PropTypes from "prop-types";
 
 function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset,filterHouseChar}) {
 
@@ -20,6 +20,14 @@ function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset
 
    </form>
   )
+}
+
+Filters.propTypes ={
+  filterNameChar:PropTypes.string,
+  handleFilterName:PropTypes.func,
+  handleFilterHouse:PropTypes.func,
+  handleReset:PropTypes.func,
+  filterHouseChar:PropTypes.string,
 }
 
 export default Filters
