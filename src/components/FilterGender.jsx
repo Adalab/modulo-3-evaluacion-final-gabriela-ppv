@@ -13,12 +13,12 @@ const handleRadio =(ev)=>{
 
 
     <div>
-        <label>
+        <label className="form--label">
             Genero
         </label>
-        <input type="radio" name="gender" value="f" onChange={handleRadio} checked={filterGender === "f"}/>
+        <input type="radio" name="gender" value="f" onChange={handleRadio} checked={filterGender === "f"} className="form--filter__gender"/>
         <label htmlFor="">Female</label>
-        <input type="radio" name="gender" value="m" onChange={handleRadio} checked={filterGender ==="m"}/>
+        <input type="radio" name="gender" value="m" onChange={handleRadio} checked={filterGender ==="m"} className="form--filter__gender"/>
         <label htmlFor="">Male</label>
     </div>
   )

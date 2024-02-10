@@ -15,11 +15,11 @@ const handleKey =(event)=>{
 
   return (
     <div>
-      <label>
-        Buscar por Personaje:
+      <label className="form--label">
+        Buscar por Personaje
       </label>
       <input type="text"  placeholder="Maria" value ={filterNameChar}  onChange={handleChange}
-      onKeyDown={handleKey} />
+      onKeyDown={handleKey}  className="form--input__name"/>
 
     </div>
   )

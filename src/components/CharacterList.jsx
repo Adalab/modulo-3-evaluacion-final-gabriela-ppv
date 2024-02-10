@@ -8,7 +8,7 @@ function CharacterList({character,filterNameChar}) {
   if(character.length ===0){
     return(
       <li>
-      <p>
+      <p className="msg">
         Ningún Personaje coincide con tu busqueda {filterNameChar}. ¡Inténtalo de nuevo!
       </p>
     </li>

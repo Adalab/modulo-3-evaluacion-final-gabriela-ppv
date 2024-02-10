@@ -1,9 +1,10 @@
-
+import "../scss/layaut/Footer.scss";
 
 function Footer() {
   return (
-    <div>
-        Footer</div>
+    <div className="footer">
+        <p>&copy;2024</p>
+<p>we <span>&hearts;</span> Harry Potter</p></div>
   )
 }
 

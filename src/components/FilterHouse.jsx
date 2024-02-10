@@ -9,8 +9,8 @@ const handleOption =(ev)=>{
   return (
     <div>
 
-      <label htmlFor="houseFilter">Selecciona la Casa:</label>
-      <select name="" id="houseFilter" value ={filterHouseChar} onChange={handleOption}>
+      <label htmlFor="houseFilter" className="form--label">Selecciona la Casa</label>
+      <select id="houseFilter" value ={filterHouseChar} onChange={handleOption} className="form--filter__house">
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Ravenclaw">Ravenclaw</option>
