@@ -37,7 +37,7 @@ const renderCard =()=>{
   
     return(
     <div className="div">
-      <Link to= "/" className="link--volver"> <i className="fa-solid fa-circle-arrow-left detail__link--icon"></i>Volver</Link> 
+      <Link to= "/" className="link--volver"> <i className="fa-solid fa-circle-arrow-left detail__link--icon"></i> Volver</Link> 
       {renderCard()}
       </div>
       
@@ -52,4 +52,4 @@ CharacterDetail.propTypes ={
 }
 
 
-export default CharacterDetail
+export default CharacterDetail;
