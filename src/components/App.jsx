@@ -14,7 +14,8 @@ import Footer from "./Footer";
 function App() {
   const [character,setCharacter] = useState ([]);
   const [filterNameChar,setFilterNameChar] = useState ("");
-  const [filterHouseChar,setFilterHouseChar]= useState("Gryffindor");
+  const [filterHouseChar,setFilterHouseChar] = useState("Gryffindor");
+  const[filterGender,setFilterGender] = useState("");
 
 
 useEffect(()=>{
@@ -36,14 +37,29 @@ const handleFilterHouse =(value)=>{
 
 }
 
+const handleFilterGender =(value)=>{
+  setFilterGender(value);
+
+}
+
 const filterCharacter = character.filter((charac)=>charac.name.toLowerCase().includes(filterNameChar))
-.filter((house)=>house.house===filterHouseChar);
+.filter((house)=>house.house===filterHouseChar)
+.filter((charact)=>{
+  if(filterGender==="f"){
+    return charact.gender === "female"
+  } else if(filterGender === "m"){
+    return charact.gender ==="male"
+  }else{
+    return true;
+  }
+});
 
 
 const handleReset =()=>{
   
   setFilterNameChar("");
   setFilterHouseChar("Gryffindor");
+  setFilterGender ("");
 }
 
 
@@ -56,7 +72,7 @@ const handleReset =()=>{
  <Routes>
 <Route path="/" element={ 
 <>
-<Filters filterNameChar={filterNameChar}  handleFilterName={handleFilterName} handleFilterHouse ={handleFilterHouse} handleReset ={handleReset} filterHouseChar ={filterHouseChar}/>
+<Filters filterNameChar={filterNameChar}  handleFilterName={handleFilterName} handleFilterHouse ={handleFilterHouse} handleReset ={handleReset} filterHouseChar ={filterHouseChar} handleFilterGender ={handleFilterGender} filterGender ={filterGender}/>
 <CharacterList character ={filterCharacter} filterNameChar={filterNameChar}/>
 
 </>

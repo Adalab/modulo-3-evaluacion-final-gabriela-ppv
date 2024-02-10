@@ -1,8 +1,9 @@
+import FilterGender from "./FilterGender";
 import FilterHouse from "./FilterHouse"
 import FilterName from "./FilterName"
 import PropTypes from "prop-types";
 
-function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset,filterHouseChar}) {
+function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset,filterHouseChar,handleFilterGender,filterGender}) {
 
  const handleClickReset =(event)=>{
   event.preventDefault();
@@ -16,6 +17,7 @@ function Filters({filterNameChar,handleFilterName,handleFilterHouse, handleReset
     <h2>Tus Personajes</h2>
     <FilterName filterNameChar={filterNameChar} handleFilterName ={handleFilterName}/>
     <FilterHouse handleFilterHouse ={handleFilterHouse} filterHouseChar ={filterHouseChar}/>
+    <FilterGender handleFilterGender ={handleFilterGender} filterGender={filterGender}/>
     <button className="button" onClick={handleClickReset}>Reset</button>
 
    </form>
@@ -28,6 +30,8 @@ Filters.propTypes ={
   handleFilterHouse:PropTypes.func,
   handleReset:PropTypes.func,
   filterHouseChar:PropTypes.string,
+  handleFilterGender:PropTypes.func,
+  filterGender:PropTypes.string,
 }
 
 export default Filters
