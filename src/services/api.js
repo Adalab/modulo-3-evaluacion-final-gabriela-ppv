@@ -11,7 +11,7 @@ const getDataApi = () => {
           gender: character.gender,
           house: character.house,
           image: character.image,
-          estatus: character.alive
+          estatus: character.alive,
         };
       });
 
