@@ -36,7 +36,7 @@ function App() {
   };
 
   const filterCharacter = character
-    .filter((charac) => charac.name.toLowerCase().includes(filterNameChar))
+    .filter((charac) => charac.name.toLowerCase().includes(filterNameChar.toLowerCase()))
     .filter((house) => house.house === filterHouseChar)
     .filter((charact) => {
       if (filterGender === "f") {

@@ -16,7 +16,7 @@ function FilterName({ filterNameChar, handleFilterName }) {
       <label className="form--label">Buscar por Personaje</label>
       <input
         type="text"
-        placeholder="Maria"
+        placeholder="Harry.."
         value={filterNameChar}
         onChange={handleChange}
         onKeyDown={handleKey}
