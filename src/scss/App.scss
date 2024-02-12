@@ -10,6 +10,7 @@ body {
 }
 
 .father {
+  background-image: url("/src/images/imagenfondo3.jpg");
   background-size: cover;
   background-color: darkcyan;
   font-family: "Benne", serif;
@@ -52,8 +53,9 @@ img {
 
 .msg {
   text-align: center;
-  color: pink;
+  color: green;
   font-size: 2rem;
+  font-weight: bolder;
 }
 li {
   list-style: none;
