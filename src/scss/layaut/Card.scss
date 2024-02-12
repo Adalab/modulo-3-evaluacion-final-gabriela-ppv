@@ -1,6 +1,7 @@
 .card {
   background-color: #f6a700;
-  border: 3px solid #641c34;
+  border: 20px solid transparent; 
+  border-image: url('/src/images/bordes.jpg') 30% round;
   border-radius: 5px;
   text-align: center;
   font-size: 1.2rem;

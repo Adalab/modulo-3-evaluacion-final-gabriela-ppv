@@ -36,8 +36,16 @@ function App() {
   };
 
   const filterCharacter = character
-    .filter((charac) => charac.name.toLowerCase().includes(filterNameChar.toLowerCase()))
-    .filter((house) => house.house === filterHouseChar)
+    .filter((charac) =>
+      charac.name.toLowerCase().includes(filterNameChar.toLowerCase())
+    )
+    .filter((charact) => {
+      if (filterHouseChar === "All") {
+        return true;
+      } else {
+        return charact.house === filterHouseChar;
+      }
+    })
     .filter((charact) => {
       if (filterGender === "f") {
         return charact.gender === "female";

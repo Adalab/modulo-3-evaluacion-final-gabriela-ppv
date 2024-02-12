@@ -35,7 +35,7 @@ function Filters({
         filterGender={filterGender}
       />
       <button className="button" onClick={handleClickReset}>
-        Reset
+        Nueva Busqueda
       </button>
     </form>
   );
